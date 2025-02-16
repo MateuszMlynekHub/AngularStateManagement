@@ -1,0 +1,14 @@
+<app-item-actions
+class="actions"
+(handleAddItem)="addItems($event)"
+(handleRemoveItem)="clearItems()"
+(handleSearchQuery)="searchItem($event)"
+></app-item-actions>
+@if(state$ | async; as state) {
+  <app-items-container 
+    [state]="state" 
+    [startTime]="startTime" 
+    (removeItem)="removeItem($event)"
+  ></app-items-container>
+}
+

@@ -1,0 +1,10 @@
+.actions {
+  display: flex; 
+  gap: .8rem;
+  .search-input {
+    max-width: 250px;
+  }
+  .input {
+    max-width: 150px;
+  }
+}

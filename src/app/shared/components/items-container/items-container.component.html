@@ -1,0 +1,17 @@
+<div class="items-container">
+  <div class="items-grid">
+    @for(item of state.items; track item) {
+      <app-item [item]="item" (removeItem)="removeItem.emit($event)"></app-item>
+    }
+  </div>
+  <div class="description">
+    <span>{{'Event Type'}}: {{state.eventType}}</span>
+    <span>{{'Number of elements'}}: {{state.itemsCount}}</span>
+    <span>{{'Execution Time'}}: {{state.eventExecutionTime | timeFormatter}}</span>
+    <span>{{'UI update time'}}: {{endTime - startTime | timeFormatter }}</span>
+    <span>{{'Execution Time in ms'}}: {{state.eventExecutionTime ?? 0 }}ms</span>
+    @if(state.eventExecutionTime) {
+      <span>{{'UI - Store'}}: {{(endTime - startTime) - state.eventExecutionTime }}ms</span>
+    }
+  </div>
+</div>

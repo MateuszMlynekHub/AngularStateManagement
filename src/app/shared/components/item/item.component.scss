@@ -1,0 +1,60 @@
+.item-wrapper {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  background-color: var(--app-white);
+  width: fit-content;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  .image {
+    width: 60px;
+    height: 60px;
+  }
+  .name-wrapper {
+    display: flex;
+    gap: .8rem;
+    .item-name {
+      font-size: 18px;
+    }
+    .delete {
+      font-size: 18px;
+    }
+  }
+  .item-rate-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 12px;
+    line-height: 12px;
+    margin-bottom: 0.5rem;
+    .item-rate,
+    .item-rate-count {
+      font-size: 12px;
+    }
+  }
+  .details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    margin: 0.3rem 0;
+  }
+  .item-price {
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+  }
+  .shipping-price {
+    color: #6e6e6e;
+  }
+}
+
+:host ::ng-deep {
+  .anticon-star {
+    font-size: 12px;
+  }
+}
