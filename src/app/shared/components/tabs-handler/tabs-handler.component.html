@@ -1,0 +1,12 @@
+<ng-container>
+  <nz-tabset nzType="card" class="edition-tabs">
+    <nz-tab *ngFor="let tab of tabs" [nzTitle]="tab.label">
+      <ng-container *ngIf="tab.component">
+        <ng-container *ngComponentOutlet="tab.component"></ng-container>
+      </ng-container>
+      <ng-container *ngIf="tab.template">
+        <ng-container *ngTemplateOutlet="tab.template"></ng-container>
+      </ng-container>
+    </nz-tab>
+  </nz-tabset>
+</ng-container>

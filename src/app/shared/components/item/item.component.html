@@ -1,0 +1,22 @@
+<div class="item-wrapper">
+  <img class="image" src="phone.png" />
+  <div>
+    <div class="name-wrapper">
+      <span class="item-name">{{item.name}}</span>
+      <span nz-icon class="delete" nzType="delete" (click)="removeItem.emit(item.id)"></span>
+    </div>
+    <div class="item-rate-wrapper">
+      <nz-rate class="item-rate" [ngModel]="item.rate" [nzDisabled]="true" nzAllowHalf></nz-rate>
+      <span class="item-rate-count">({{item.rateCount}})</span>
+    </div>
+    <div class="details-wrapper">
+      @for(detail of item.details; track detail) {
+        <span class="detail">{{detail.code}}: {{detail.value}}</span>
+      }
+    </div>
+    <span class="item-price">{{item.price}}$</span>
+    <br>
+    <span class="shipping-price">{{ item.shippingPrice === 0 ? 'Free shipping' : item.shippingPrice}}</span>
+  </div>
+</div>
+

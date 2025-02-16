@@ -1,0 +1,113 @@
+body {
+  --sidebar-menu-background-color: #18191b;
+  --sidebar-menu-lighter-background-color: #222326;
+  --app-background: #f2f4f7;
+  --app-background-process: #f5f5f5;
+  --app-blue: #e3f2fd;
+  --app-black: #000000;
+  --app-white: #fff;
+  --app-gray: #98a2b3;
+  --app-text-light-gray: #5a5f5f;
+  --app-secondary-gray: #a6adac;
+  --app-light-background-gray: #f5f8ff;
+  --app-blue-accent: #0ba5ec;
+  --app-main-blue: #155eef;
+  --app-main-blue-upload: #004eeb;
+  --app-radio-button-border-blue: #3f7af2;
+  --app-status-blue: #0040c1;
+  --app-status-blue-background: #eff4ff;
+  --app-status-red: #ff5757;
+  --app-text-warning: #e34f5c;
+  --app-status-red-background: #ffe7e6;
+  --app-ligt-black: #36404e;
+  --app-title-color: #222326;
+  --app-light-gray: #f9fafb;
+  --app-lighter-gray: #fcfcfd;
+  --app-background-gray: #f6f6f6;
+  --app-subtitle-color: #475467;
+  --app-icon-gray: #667085;
+  --app-light-blue: #d1e0ff;
+  --app-light-red: #fee4e2;
+  --app-dark-red: #9d1b42;
+  --app-light-purple: #f5f3ff;
+  --app-purple: #7839ee;
+  --app-red: #b42318;
+  --app-note-text: #e40000;
+  --app-red-claret: #912018;
+  --app-border-color: #d0d5dd;
+  --app-tabs-color: #667085;
+  --app-tabs-border-color: #f9fafa;
+  --app-span-color: #eaecf0;
+  --app-gray-border: #d9d9d9;
+  --app-tile-desc-color: #101828;
+  --app-tile-desc-light: #1018281a;
+  --app-tile-desc-lighter: #1018280f;
+  --app-green: #027a48;
+  --app-light-green: #1ad058;
+  --app-dark-green: #039855;
+  --app-green-light: #ecfdf3;
+  --app-green-slightly-light: #d1fadf;
+  --app-orange: #dd7538;
+  --app-orange-light: #ffe8dc;
+  --app-light-yellow: #fffaeb;
+  --app-warning-bg: #fef0c7;
+  --control-inactive-color: #18191b;
+  --control-active-color: #667085;
+  --tag-gray: #f0f2f5;
+  --sidebar-width: 280px;
+  --sidebar-collapsed-width: 80px;
+  --adk-control-height: 40px;
+  --control-required: #f04438;
+  --control-selected: #f9fafb;
+  --control-error-text-color: #ff4d4f;
+  --tabs-bar-shadow: #f0f0f0;
+  --table-hover-background-color: #eff4ff;
+  --margin-y: 10px;
+  --margin-x: 50px;
+  --mobile-nav-width: 100%;
+  --default-gray-background: #4c4c4c;
+  --main-yellow-color: #ffd700;
+  --light-blue-text: #528bff;
+  --primary-button-color: #0066cc;
+
+  //config
+  --sidebar-background-color: #5a5f5f; // #ffd700
+  --sidebar-logo-background-color: #222326; // #ffd700
+  --sidebar-primary-text-color: #ffffff; // #1E1E1E
+  --sidebar-selected-element-background-color: #515454; //#FFF0A1
+  --sidebar-selected-element-color: #0ba5ec; //#1E1E1E
+  --sidebar-element-border-color: #989a9a;
+  --sidebar-selected-element-icon-color: #d0d5dd; // #000000
+  --sidebar-element-icon-color: #8c8f8f; // #000000
+  --home-tile-first-gradient-color: #f9f9f9;
+  --home-tile-second-gradient-color: #f3f3f3;
+  --alert-modal-background-success: #9bd4a7;
+  --alert-modal-background-failure: #f5aaa9;
+  --sidebar-element-hover: #515454;
+  --table-content-color: #475467;
+  --table-header-color: #667085;
+  --header-background: transparent;
+  --body-background: transparent;
+  --login-screen-background-color-desktop: #ffffff;
+  --login-screen-background-color-mobile: #ffffff;
+  //buttons
+  --primary-button-background-color: #0066cc; // #ffd700
+  --primary-button-text-color: #ffffff; // #000000
+  //tooltip
+  --tooltip-background-color: #18191b; //#ffd700
+  --tooltip-icon-background-color: #d0d5dd; //#ffd700
+  --tooltip-text-color: #f9fafb; //#475467
+  //inputs
+  --input-controls-color: #2970ff; //#FFD700
+  --input-controls-border-color: #d0d5dd; //#FFD700
+  --input-controls-content-color: #d0d5dd; //#36404E
+  --main-border-color: #4c4c4c; // #FFD700
+  //text
+  --font-family: 'Inter', Arial, Helvetica, sans-serif;
+  --main-text-color: #222326; // #1E1E1E
+  --secondary-text-color: #475467; // #787878
+  --invoices-balance-background: #ffffff; //#FFD700
+  --value-color: #667085; //#5A5F5F
+  --link-text-color: #155eef;
+  --url-color: #2970ff;
+}
