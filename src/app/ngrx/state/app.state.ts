@@ -1,10 +1,10 @@
-import { ItemState } from "../../shared/models/state.model"
+import { ItemStateModel } from "../../shared/models/state.model"
 
 export interface AppState {
-  items: ItemState
+  items: ItemStateModel
 }
 
-export const initialState: ItemState = {
+export const initialState: ItemStateModel = {
   items: [],
   error: null,
   searchQuery: null,

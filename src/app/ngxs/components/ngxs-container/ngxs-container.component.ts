@@ -1,28 +1,29 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit } from '@angular/core'
-import { Store } from '@ngrx/store'
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
-import { SelectItemsState } from '../../state/items.selectors'
 import { NzModule } from '../../../shared/modules/nz.module'
 import { ItemsContainerComponent } from '../../../shared/components/items-container/items-container.component'
-import { addItems, clearItems, removeItem, searchItem } from '../../state/items.actions'
 import { Observable } from 'rxjs'
 import { ItemStateModel } from '../../../shared/models/state.model'
-import { ItemActionsService } from '../../../shared/services/item-actions.service'
+import { Store } from '@ngxs/store'
+import { ItemsActions } from '../../state/items.actions'
+import { ItemState } from '../../state/items.states'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
+import { ItemActionsService } from '../../../shared/services/item-actions.service'
+
 @Component({
-  selector: 'app-ngrx-container',
-  templateUrl: './ngrx-container.component.html',
-  styleUrls: ['./ngrx-container.component.scss'],
+  selector: 'app-ngxs-container',
+  templateUrl: './ngxs-container.component.html',
+  styleUrls: ['./ngxs-container.component.scss'],
   imports: [CommonModule, NzModule, FormsModule, ItemsContainerComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NgrxContainerComponent implements OnInit {
+export class NgxsContainerComponent implements OnInit {
   startTime!: number
   private readonly store = inject(Store)
   private readonly actions = inject(ItemActionsService)
   private readonly destroyRef = inject(DestroyRef)
-  readonly state$: Observable<ItemStateModel> = this.store.select(SelectItemsState)
+  state$: Observable<ItemStateModel> = this.store.select(ItemState.fullState)
 
   ngOnInit() {
     this.actions.addItems$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(count => this.addItems(count))
@@ -32,21 +33,21 @@ export class NgrxContainerComponent implements OnInit {
 
   addItems(itemsCount: number) {
     this.startTime = performance.now()
-    this.store.dispatch(addItems({itemsCount}))
+    this.store.dispatch(new ItemsActions.AddItems(itemsCount))
   }
 
   removeItem(id: number) {
     this.startTime = performance.now()
-    this.store.dispatch(removeItem({id}))
+    this.store.dispatch(new ItemsActions.RemoveItem(id))
   }
 
   clearItems() {
     this.startTime = performance.now()
-    this.store.dispatch(clearItems())
+    this.store.dispatch(new ItemsActions.ClearItems())
   }
 
   searchItem(searchQuery: string | null) {
     this.startTime = performance.now()
-    this.store.dispatch(searchItem({searchQuery}))
+    this.store.dispatch(new ItemsActions.SearchItem(searchQuery))
   }
 }

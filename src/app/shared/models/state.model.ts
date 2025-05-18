@@ -1,6 +1,6 @@
 import { Item } from "./items.model"
 
-export interface ItemState {
+export interface ItemStateModel {
   items: Item[]
   error: string | null
   searchQuery: string | null

@@ -1,3 +1,16 @@
 .header{
   text-align: center;
 }
+
+:host ::ng-deep .ant-divider-vertical {
+  border-width: 3px;
+}
+
+.comparison {
+  display: flex;
+  gap: 1rem;
+}
+
+.divider {
+  height: 100%;
+}
