@@ -1,5 +1,6 @@
 .items-container {
   display: flex;
+  gap: 1rem;
   .items-grid {
     // display: grid;
     // grid-template-columns: repeat(4, minmax(230px, 1fr));

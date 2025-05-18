@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ItemComponent } from '../item/item.component';
 import { NzModule } from '../../modules/nz.module';
-import { ItemState } from '../../models/state.model';
+import { ItemStateModel } from '../../models/state.model';
 import { TimeFormatterPipe } from '../../pipes/ms-to-date.pipe';
 
 @Component({
@@ -14,7 +14,7 @@ import { TimeFormatterPipe } from '../../pipes/ms-to-date.pipe';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ItemsContainerComponent implements AfterContentChecked{
-  @Input({required: true}) state!: ItemState
+  @Input({required: true}) state!: ItemStateModel
   @Input() startTime!: number
   @Output() removeItem = new EventEmitter<number>()
   endTime = 0 

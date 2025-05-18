@@ -29,7 +29,7 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number'
 import { NzTabsModule } from 'ng-zorro-antd/tabs'
 import { NzRateModule } from 'ng-zorro-antd/rate'
 import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
-
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 @NgModule({
   imports: [
@@ -63,7 +63,8 @@ import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
     NzInputNumberModule,
     NzTabsModule,
     NzRateModule,
-    NzDescriptionsModule 
+    NzDescriptionsModule,
+    NzDividerModule
   ],
   exports: [
     NzLayoutModule,
@@ -96,7 +97,8 @@ import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
     NzInputNumberModule,
     NzTabsModule,
     NzRateModule,
-    NzDescriptionsModule 
+    NzDescriptionsModule,
+    NzDividerModule 
   ],
 })
 export class NzModule {}

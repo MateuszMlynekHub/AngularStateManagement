@@ -16,19 +16,15 @@ module.exports = tseslint.config(
     rules: {
       "@angular-eslint/directive-selector": [
         "error",
-        {
-          type: "attribute",
-          prefix: "app",
-          style: "camelCase",
-        },
+        { type: "attribute", prefix: "app", style: "camelCase" },
       ],
       "@angular-eslint/component-selector": [
         "error",
-        {
-          type: "element",
-          prefix: "app",
-          style: "kebab-case",
-        },
+        { type: "element", prefix: "app", style: "kebab-case" },
+      ],
+      "@typescript-eslint/no-namespace": [
+        "error",
+        { allowDeclarations: true }
       ],
     },
   },
@@ -43,7 +39,7 @@ module.exports = tseslint.config(
       "@typescript-eslint/no-unused-vars": "error",
       "@typescript-eslint/no-explicit-any": "error",
       "curly": "error",
-      "@typescript-eslint/no-inferrable-types": "off"
+      "@typescript-eslint/no-inferrable-types": "off",
     },
   }
 );
