@@ -1,0 +1,16 @@
+body {
+  background-color: var(--app-background-gray);
+}
+
+.ant-btn,
+.ant-input,
+.ant-input-affix-wrapper {
+  border-radius: 8px;
+  height: 34px;
+}
+
+.ant-input-affix-wrapper {
+  .ant-input {
+    height: 22px !important;
+  }
+}

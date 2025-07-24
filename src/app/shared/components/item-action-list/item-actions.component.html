@@ -1,0 +1,23 @@
+<div class="actions">
+  <nz-input-group [nzPrefix]="prefixTemplateSearch" [nzSuffix]="inputClearTpl" class="search-input">
+    <input
+      class="search-query"
+      type="text"
+      [(ngModel)]="searchQuery"
+      (ngModelChange)="searchQueryChanged($event)"
+      nz-input
+      [placeholder]="'Search' | translate"
+    />
+  </nz-input-group>
+  <nz-input-number [nzMin]="1" [nzMax]="10000" class="input" nz-input type="number" [(ngModel)]="elementCount"/>
+  <!-- <button nz-button (click)="handleLoadData.emit()">{{'Load data' | translate}}</button> -->
+  <button nz-button (click)="handleAddItem.emit(elementCount)">{{'Add item' | translate}}</button>
+  <button nz-button (click)="handleRemoveItem.emit()">{{'Clear items' | translate}}</button>
+</div>
+
+<ng-template #prefixTemplateSearch>
+  <span nz-icon nzType="search" nzTheme="outline"></span>
+</ng-template>
+<ng-template #inputClearTpl>
+  <span id="reset-search" nz-icon class="ant-input-clear-icon" nzType="close" *ngIf="searchQuery" (click)="handleResetSearch()"></span>
+</ng-template>

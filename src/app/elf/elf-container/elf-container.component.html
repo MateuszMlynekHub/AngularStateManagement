@@ -1,0 +1,8 @@
+@if (state$ | async; as state) {
+  <app-items-container 
+    [state]="state" 
+    [startTime]="startTime" 
+    (removeItem)="removeItem($event)"
+  ></app-items-container>
+}
+
